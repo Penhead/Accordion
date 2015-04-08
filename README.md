@@ -10,6 +10,6 @@ Then use this html template for each accordion section.
 ```html
 <div class="accordion">
     <a href="#">Title</a>
-    <div class="content">test</div>
+    <div class="content">Your text here</div>
 </div>
 ```
