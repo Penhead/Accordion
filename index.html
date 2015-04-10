@@ -5,46 +5,58 @@
     <title></title>
 
     <style type="text/css">
-        body{
+        body {
             font-family: sans-serif;
         }
-        .accordion{
+
+        .accordion {
             margin-bottom: 15px;
             width: 100%;
         }
-        .accordion a{
+
+        .accordion a {
             background-color: gray;
             color: #2d2d2d;
+            padding: 10px 0;
             margin: 0;
             width: 100%;
             display: block;
         }
-        .accordion .content{
+
+        .accordion .content {
             background-color: lightblue;
             display: none;
+            padding: 40px 0;
         }
     </style>
 </head>
 <body>
 <h1>Accordion</h1>
 
-<div class="accordion">
-    <a href="#">Title</a>
-    <div class="content test">test</div>
-</div>
-<div class="accordion">
-    <a href="#">Title</a>
-    <div class="content test2">test</div>
-</div>
+<div id="accordion-main">
+    <div class="accordion">
+        <a href="#">Title</a>
 
-<div class="accordion">
-    <a href="#">Title</a>
-    <div class="content test3">test</div>
-</div>
+        <div class="content test">test</div>
+    </div>
 
-<div class="accordion">
-    <a href="#">Title</a>
-    <div class="content test4">test</div>
+    <div class="accordion">
+        <a href="#">Title</a>
+
+        <div class="content test2">test</div>
+    </div>
+
+    <div class="accordion">
+        <a href="#">Title</a>
+
+        <div class="content test3">test</div>
+    </div>
+
+    <div class="accordion">
+        <a href="#">Title</a>
+
+        <div class="content test4">test</div>
+    </div>
 </div>
 
 <script src="components.js"></script>
