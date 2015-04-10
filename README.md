@@ -13,5 +13,10 @@ Then use this html template for each accordion section.
         <a href="#">Title</a>
         <div class="content">Your text here</div>
     </div>
+    
+    <div class="accordion">
+        <a href="#">Title</a>
+        <div class="content">Your text here</div>
+    </div>
 </div>
 ```
