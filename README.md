@@ -8,8 +8,10 @@ To create the accordion just include the javascript into your index file
 
 Then use this html template for each accordion section.
 ```html
-<div class="accordion">
-    <a href="#">Title</a>
-    <div class="content">Your text here</div>
+<div id='accordion-main'>
+    <div class="accordion">
+        <a href="#">Title</a>
+        <div class="content">Your text here</div>
+    </div>
 </div>
 ```
