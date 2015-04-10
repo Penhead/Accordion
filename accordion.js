@@ -1,29 +1,30 @@
-window.onload = function(){
+window.onload = function () {
     //Accordion Logic
     var open = false,
-        i = 0,
         openContent,
-        accordionElem = document.querySelectorAll('div.accordion');
-    function accordion(){
-        open = !open;
-        if(openContent != this && openContent != undefined){
-          //console.log('hit first check', openContent, this);
-            openContent.style.display = 'none';
-            open = true;
-        }
-        if(openContent == this.querySelector('div.content')){
-            open = false;
-        }
-        if(open){
-            openContent = this.querySelector('div.content');
-            this.querySelector('div.content').style.display = "block";
-        }else{
-            this.querySelector('div.content').style.display = "none";
-        }
-    }
+        theParent = document.querySelector("#accordion-main");
 
-    for(;i < accordionElem.length; i++){
-        accordionElem[i].addEventListener('click', accordion);
+    theParent.addEventListener("click", accordion, false);
+
+    function accordion(e) {
+        if (e.target !== e.currentTarget) {
+            var accordParent = e.target.parentNode;
+            open = !open;
+            if (openContent != accordParent.querySelector('div.content') && openContent != undefined) {
+                openContent.style.display = 'none';
+                open = true;
+                if (openContent == accordParent.querySelector('div.content')) {
+                    open = false;
+                }
+            }
+            if (open) {
+                openContent = accordParent.querySelector('div.content');
+                accordParent.querySelector('div.content').style.display = "block";
+            } else {
+                accordParent.querySelector('div.content').style.display = "none";
+            }
+        }
+        e.stopPropagation();
+        //End Accordion Logic
     }
-    //End Accordion Logic
 }
